@@ -18,6 +18,9 @@ header {
     border-bottom: 1px solid #000;
     background: #fcfaf3;
     z-index: 99;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #inner {
