@@ -1,5 +1,6 @@
 # If you're curious about the person behind this website, you're in the right place. Let me share my journey - a path that has shaped my passions and ambitions.
 tag: introduction
+date: 7th of July, 2025
 
 From a young age, computers weren't just gadgets to me; yes, I loved gaming but they were also something I enjoyed with passion. Growing up, I was that kid in elementary school who fixed classmates' tech issues and tinkered with basic programming. I spent hours immersed in video games, but what truly got me hooked at first, was understanding how they work, and how to make them. My early projects in Scratch and Clickteam Fusion 2.5 were simple, but they sparked a deep curiosity about code and logic behind games. Unfortunately, those early projects of mine are now lost media, but they were the foundation of my childhood curiousity towards computers and technology.
 
