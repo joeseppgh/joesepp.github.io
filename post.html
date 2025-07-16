@@ -8,6 +8,13 @@
         <link rel="stylesheet" href="style.css" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+            rel="stylesheet"
+        />
+
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <script type="module" src="reader.js" defer></script>
     </head>
@@ -15,16 +22,15 @@
     <body>
         <header>
             <div id="inner">
-                <h2>
-                    <a
-                        href="index.html"
-                        style="text-decoration: none; color: inherit"
-                        >blog<br />@<br />joesepp.network</a
+                <h2 class="anaheim-600">
+                    <a href="/" style="text-decoration: none; color: inherit"
+                        >blog<br />at<br />joesepp
+                        <span id="dot">[dot]</span> network</a
                     >
                 </h2>
             </div>
         </header>
 
-        <main id="post"></main>
+        <main id="post" class="merriweather-400"></main>
     </body>
 </html>

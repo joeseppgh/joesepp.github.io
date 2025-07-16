@@ -8,6 +8,13 @@
         <link rel="stylesheet" href="style.css" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+            rel="stylesheet"
+        />
+
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <script type="module" src="main.js" defer></script>
     </head>
@@ -15,26 +22,30 @@
     <body>
         <header>
             <div id="inner">
-                <h2>blog<br />@<br />joesepp.network</h2>
+                <h2 class="anaheim-600">
+                    blog<br />at<br />joesepp
+                    <span id="dot">[dot]</span> network
+                </h2>
             </div>
         </header>
 
-        <main>
+        <main class="merriweather-400">
             <section id="container"></section>
         </main>
 
-        <footer>
+        <footer class="merriweather-400">
             <div><h2>Contact</h2></div>
 
             <div id="contact-div">
-                <span>Email</span><br />
+                <span>Business e-mail</span><br />
                 <b
                     ><a
                         href="mailto:business@joesepp.network"
                         class="footer-link"
                         >business@joesepp.network</a
                     ></b
-                ><br />-<br />
+                ><br /><br />
+                <span>Personal e-mail</span><br />
                 <b
                     ><a
                         href="mailto:personal@joesepp.network"
@@ -51,7 +62,7 @@
                 >
             </div>
 
-            <div>
+            <div class="anaheim-400">
                 Blog at joesepp [dot] network © 2025 | Inspired by
                 <a href="https://worksinprogress.co/" class="wip-link"
                     >Works in Progress</a

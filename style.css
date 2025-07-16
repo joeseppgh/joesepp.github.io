@@ -5,6 +5,30 @@
     box-sizing: border-box;
 }
 
+/* --------------- Fonts --------------- */
+
+.merriweather-400 {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.anaheim-400 {
+    font-family: "Anaheim", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.anaheim-500 {
+    font-family: "Anaheim", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
@@ -31,6 +55,11 @@ header {
 
 header h2 {
     font: 400 18px/1.2 monospace;
+}
+
+header h2 #dot:hover {
+    cursor: pointer;
+    font-weight: 700;
 }
 
 /* --------------- Index grid --------------- */
@@ -148,6 +177,11 @@ footer .wip-link:hover {
     line-height: 1.6;
 }
 
+sub {
+    color: dimgray;
+}
+
+/* --------------- Responsiveness --------------- */
 @media only screen and (max-width: 1300px) {
     #post {
         width: 60%;
