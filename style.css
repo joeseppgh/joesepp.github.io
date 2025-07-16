@@ -148,6 +148,24 @@ footer .wip-link:hover {
     line-height: 1.6;
 }
 
+@media only screen and (max-width: 1300px) {
+    #post {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #post {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #post {
+        width: 80%;
+    }
+}
+
 #post h1 {
     margin-top: 0;
 }
