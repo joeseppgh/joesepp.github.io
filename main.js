@@ -1,6 +1,6 @@
 import { posts } from "./posts.js";
 
-/* Utility: extract YYYY-MM-DD, title-slug from file name */
+/* extract YYYY-MM-DD, title-slug from file name */
 function parseFilename(filename) {
   const [, date, slug] = filename.match(/^(\d{4}-\d{2}-\d{2})-(.+)\.md$/) || [];
   const title = slug
@@ -10,7 +10,7 @@ function parseFilename(filename) {
   return { date, title };
 }
 
-/* Fetch first meaningful line that starts with '#', look for 'tag:', and calculate read time */
+/* fetch first meaningful line that starts with '#', look for 'tag:', and calculate read time */
 async function getMeta(file) {
   const res = await fetch(`posts/${file}`);
   const text = await res.text();
@@ -23,17 +23,16 @@ async function getMeta(file) {
     lines.find((l) => l.toLowerCase().startsWith("tag:")) || "tag: misc";
   const tag = tagLine.split(":")[1].trim();
 
-  // Calculate word count and read time
   const wordCount = text
     .trim()
     .split(/\s+/)
     .filter((word) => word.length > 0).length;
-  const readTimeMinutes = Math.ceil(wordCount / 225); // 200 words per minute
+  const readTimeMinutes = Math.ceil(wordCount / 225);
 
   return { description, tag, readTime: readTimeMinutes };
 }
 
-/* Build a card and inject it */
+/* build a card and inject it */
 async function makeCard(file) {
   const { date, title } = parseFilename(file);
   const { description, tag, readTime } = await getMeta(file);

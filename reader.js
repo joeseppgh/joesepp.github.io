@@ -18,7 +18,7 @@ async function loadPost() {
 
   const md = await res.text();
 
-  // Calculate word count and read time
+  // calculate word count and read time
   const wordCount = md
     .trim()
     .split(/\s+/)
