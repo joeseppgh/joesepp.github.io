@@ -10,8 +10,7 @@ function parseFilename(filename) {
   return { date, title };
 }
 
-/* Fetch first meaningful line that starts with '#' for the description.
-   Also look for a line starting with 'tag:'. */
+/* Fetch first meaningful line that starts with '#', look for 'tag:', and calculate read time */
 async function getMeta(file) {
   const res = await fetch(`posts/${file}`);
   const text = await res.text();
@@ -24,13 +23,20 @@ async function getMeta(file) {
     lines.find((l) => l.toLowerCase().startsWith("tag:")) || "tag: misc";
   const tag = tagLine.split(":")[1].trim();
 
-  return { description, tag };
+  // Calculate word count and read time
+  const wordCount = text
+    .trim()
+    .split(/\s+/)
+    .filter((word) => word.length > 0).length;
+  const readTimeMinutes = Math.ceil(wordCount / 225); // 200 words per minute
+
+  return { description, tag, readTime: readTimeMinutes };
 }
 
 /* Build a card and inject it */
 async function makeCard(file) {
   const { date, title } = parseFilename(file);
-  const { description, tag } = await getMeta(file);
+  const { description, tag, readTime } = await getMeta(file);
 
   const card = document.createElement("article");
   card.className = "blog-post";
@@ -38,13 +44,14 @@ async function makeCard(file) {
     <div class="title">
       <h2>${title}</h2><br/><span class='date'>${date}</span>
     </div>
-
     <div class="content">
       <span class="description">${description}</span>
       <button data-file="${file}">Read more →</button>
     </div>
-
-    <div class="footer"><div class="tag">${tag}</div></div>
+    <div class="footer">
+      <div class="tag">${tag}</div>
+      <div class="read-time">Read time: ~${readTime} min</div>
+    </div>
   `;
 
   card

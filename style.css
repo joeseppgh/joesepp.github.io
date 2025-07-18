@@ -29,6 +29,8 @@
     font-style: normal;
 }
 
+/* --------------- Body --------------- */
+
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
@@ -125,6 +127,7 @@ main {
 
 .blog-post .footer {
     border-top: 1px solid #000;
+    display: flex;
 }
 
 .blog-post .tag {
@@ -137,15 +140,32 @@ main {
     user-select: none;
 }
 
+.blog-post .read-time {
+    color: dimgray;
+    padding: 0.6rem 1.2rem;
+}
+
 /* --------------- Footer --------------- */
 footer {
     width: 75%;
     margin: 2rem auto 4rem;
 }
 
-footer div {
+footer #contact-div,
+footer #copyright-div {
     padding: 1rem 0;
     border-bottom: 1px solid #000;
+}
+
+footer #contact-div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+footer .contact-div-child {
+    border-left: 1px solid black;
+    padding: 1rem;
 }
 
 footer h2 {
@@ -170,6 +190,10 @@ footer .wip-link:hover {
     font-weight: 500;
 }
 
+.x-logo {
+    font-size: 20px;
+}
+
 /* --------------- Post page --------------- */
 #post {
     width: 40%;
@@ -177,8 +201,18 @@ footer .wip-link:hover {
     line-height: 1.6;
 }
 
-sub {
+sub,
+sup {
     color: dimgray;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    font-weight: 700;
+    color: darkslateblue;
 }
 
 /* --------------- Responsiveness --------------- */
@@ -197,6 +231,11 @@ sub {
 @media only screen and (max-width: 800px) {
     #post {
         width: 80%;
+    }
+
+    footer .contact-div-child {
+        border-left: 0;
+        border-top: 1px solid black;
     }
 }
 
