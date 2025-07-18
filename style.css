@@ -34,7 +34,7 @@
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
-    background: #fcfaf3;
+    background: #f7f2ee;
 }
 
 /* --------------- Header --------------- */
@@ -42,7 +42,7 @@ header {
     position: sticky;
     top: 0;
     border-bottom: 1px solid #000;
-    background: #fcfaf3;
+    background: #f7f2ee;
     z-index: 99;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -206,11 +206,11 @@ sup {
     color: dimgray;
 }
 
-a {
+.post-a {
     color: black;
 }
 
-a:hover {
+.post-a:hover {
     font-weight: 700;
     color: darkslateblue;
 }

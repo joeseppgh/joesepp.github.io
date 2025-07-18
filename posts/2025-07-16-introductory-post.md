@@ -16,7 +16,7 @@ Let's start with when I got to use a computer for the first time. When I was abo
 
 ---
 
-When I was about 11 or 12, my IT class teacher in elementary school, taught us <b>Scratch</b> and <b>turtle.py</b> I then proceeded create simple games and drawing scripts, which brought me even more fun than notepad scripting! This was also the time when I discovered a game engine called <b>Clickteam Fusion 2.5</b> <sup>(fun fact: first FNAF was made in this)</sup>. I spent a few days learning this engine and then created two projects: a clone of <a href="https://januszsimulator.en.aptoide.com/app" target="_blank">Janusz Simulator</a> (it seems like it was deleted from the Play Store so here's an Aptoide link) and a Zombie Survival Platformer.
+When I was about 11 or 12, my IT class teacher in elementary school, taught us <b>Scratch</b> and <b>turtle.py</b> I then proceeded create simple games and drawing scripts, which brought me even more fun than notepad scripting! This was also the time when I discovered a game engine called <b>Clickteam Fusion 2.5</b> <sup>(fun fact: first FNAF was made in this)</sup>. I spent a few days learning this engine and then created two projects: a clone of <a class="post-a" href="https://januszsimulator.en.aptoide.com/app" target="_blank">Janusz Simulator</a> (it seems like it was deleted from the Play Store so here's an Aptoide link) and a Zombie Survival Platformer.
 
 ---
 
